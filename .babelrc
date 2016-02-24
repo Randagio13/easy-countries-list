@@ -1,0 +1,17 @@
+{
+    "presets": ["react", "es2015", "stage-0"],
+    "sourceMaps": "both",
+    "plugins": [
+        "transform-node-env-inline",
+        "transform-decorators-legacy",
+        "transform-object-rest-spread"
+    ],
+    "env": {
+        "production": {
+            "plugins": [
+              "transform-react-constant-elements",
+              "transform-remove-debugger"
+            ]
+        }
+    }
+}

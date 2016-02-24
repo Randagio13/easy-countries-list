@@ -1,0 +1,6 @@
+node_modules
+build/*.js
+*.html
+*.config.js
+*.conf.js
+server.js
