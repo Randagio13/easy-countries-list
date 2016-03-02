@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for easy-countries-list/app/app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">easy-countries-list/app/</a> app.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.65% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>20/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">247×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">247×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+&nbsp;
+var _countries = require('./utils/countries.json');
+&nbsp;
+var _countries2 = _interopRequireDefault(_countries);
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? <span class="branch-0 cbranch-no" title="branch not covered" >obj </span>: { default: obj }; }
+&nbsp;
+function _classCallCheck(instance, Constructor) { <span class="missing-if-branch" title="if path not taken" >I</span>if (!(instance instanceof Constructor)) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Cannot call a class as a function"); </span>} }
+&nbsp;
+var EasyCountriesList = function EasyCountriesList() {
+  var _this = this;
+&nbsp;
+  _classCallCheck(this, EasyCountriesList);
+&nbsp;
+  this.countries = _countries2.default.countries;
+&nbsp;
+  this.getAllCountries = function () {
+    return _this.countries;
+  };
+&nbsp;
+  this.getFilterCountryName = function (countryName) {
+    var countryResult = _this.countries.filter(function (country) {
+      return country.name.toLowerCase() === countryName.toLowerCase();
+    });
+    return countryResult[0];
+  };
+&nbsp;
+  this.getFilterCountryCode = function (countryCode) {
+    var countryResult = _this.countries.filter(function (country) {
+      return country.countryCode.toLowerCase() === countryCode.toLowerCase();
+    });
+    return countryResult[0];
+  };
+};
+&nbsp;
+exports.default = new EasyCountriesList();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9hcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7SUFFTTs7Ozs7T0FDSixZQUFZLG9CQUFjLFNBQWQ7O09BQ1osa0JBQWtCLFlBQU07QUFDdEIsV0FBTyxNQUFLLFNBQUwsQ0FEZTtHQUFOOztPQUdsQix1QkFBdUIsVUFBQyxXQUFELEVBQWlCO0FBQ3RDLFFBQU0sZ0JBQWdCLE1BQUssU0FBTCxDQUFlLE1BQWYsQ0FDcEI7YUFBVyxRQUFRLElBQVIsQ0FBYSxXQUFiLE9BQStCLFlBQVksV0FBWixFQUEvQjtLQUFYLENBREksQ0FEZ0M7QUFJdEMsV0FBTyxjQUFjLENBQWQsQ0FBUCxDQUpzQztHQUFqQjs7T0FNdkIsdUJBQXVCLFVBQUMsV0FBRCxFQUFpQjtBQUN0QyxRQUFNLGdCQUFnQixNQUFLLFNBQUwsQ0FBZSxNQUFmLENBQ3BCO2FBQVcsUUFBUSxXQUFSLENBQW9CLFdBQXBCLE9BQXNDLFlBQVksV0FBWixFQUF0QztLQUFYLENBREksQ0FEZ0M7QUFJdEMsV0FBTyxjQUFjLENBQWQsQ0FBUCxDQUpzQztHQUFqQjs7O2tCQVFWLElBQUksaUJBQUoiLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9hbGVzc2FuZHJvY2FzYXp6YTEzL1NpdGVzL2Vhc3ktY291bnRyaWVzLWxpc3QiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgY291bnRyaWVzTGlzdCBmcm9tICcuL3V0aWxzL2NvdW50cmllcy5qc29uJztcblxuY2xhc3MgRWFzeUNvdW50cmllc0xpc3Qge1xuICBjb3VudHJpZXMgPSBjb3VudHJpZXNMaXN0LmNvdW50cmllcztcbiAgZ2V0QWxsQ291bnRyaWVzID0gKCkgPT4ge1xuICAgIHJldHVybiB0aGlzLmNvdW50cmllcztcbiAgfTtcbiAgZ2V0RmlsdGVyQ291bnRyeU5hbWUgPSAoY291bnRyeU5hbWUpID0+IHtcbiAgICBjb25zdCBjb3VudHJ5UmVzdWx0ID0gdGhpcy5jb3VudHJpZXMuZmlsdGVyKFxuICAgICAgY291bnRyeSA9PiBjb3VudHJ5Lm5hbWUudG9Mb3dlckNhc2UoKSA9PT0gY291bnRyeU5hbWUudG9Mb3dlckNhc2UoKVxuICAgICk7XG4gICAgcmV0dXJuIGNvdW50cnlSZXN1bHRbMF07XG4gIH07XG4gIGdldEZpbHRlckNvdW50cnlDb2RlID0gKGNvdW50cnlDb2RlKSA9PiB7XG4gICAgY29uc3QgY291bnRyeVJlc3VsdCA9IHRoaXMuY291bnRyaWVzLmZpbHRlcihcbiAgICAgIGNvdW50cnkgPT4gY291bnRyeS5jb3VudHJ5Q29kZS50b0xvd2VyQ2FzZSgpID09PSBjb3VudHJ5Q29kZS50b0xvd2VyQ2FzZSgpXG4gICAgKTtcbiAgICByZXR1cm4gY291bnRyeVJlc3VsdFswXTtcbiAgfTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgbmV3IEVhc3lDb3VudHJpZXNMaXN0KCk7XG4iXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 02 2016 11:29:14 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

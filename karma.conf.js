@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path'); // eslint-disable-line
+var webpack = require('webpack'); // eslint-disable-line
 
-module.exports = function (config) {
+module.exports = function(config) { // eslint-disable-line
   config.set({
     autoWatch: true,
     singleRun: true,
@@ -25,21 +25,14 @@ module.exports = function (config) {
       module: {
         loaders: [
           {
-              test: /\.(jsx|js)?$/,
-              exclude: /node_modules/,
-              loader: 'babel',
-              query: {
-                  presets: ['react', 'es2015', 'stage-0'],
-                  plugins: [
-                      'transform-node-env-inline',
-                      'transform-decorators-legacy'
-                  ]
-              }
+            test: /\.(jsx|js)?$/,
+            exclude: /node_modules/,
+            loader: 'babel'
           },
-          {test: /\.css$/, loader: 'style!css'},
-          {test: /\.less$/, loader: 'style!css!less'},
-          {test: /\.json$/, loader: 'json-loader'},
-          {test: /\.(png|eot|woff|woff2|svg|ttf)$/, loader: 'url-loader'}
+          {
+            test: /\.json$/,
+            loader: 'json-loader'
+          }
         ],
         postLoaders: [
           {
@@ -50,26 +43,26 @@ module.exports = function (config) {
         ]
       },
       resolve: {
-          root: [
-              path.resolve('./app/'),
-              path.resolve('./node_modules/')
-          ],
-          modulesDirectories: ['node_modules'],
-          extensions: ['', '.jsx', '.js']
+        root: [
+          path.resolve('./app/'),
+          path.resolve('./node_modules/')
+        ],
+        modulesDirectories: ['node_modules'],
+        extensions: ['', '.jsx', '.js']
       },
       plugins: [
-        new webpack.ProvidePlugin({
-          React: 'react'
-        }),
-          // new webpack.optimize.UglifyJsPlugin(),
-      ],
+        // new webpack.ProvidePlugin({
+        //   React: 'react'
+        // })
+        // new webpack.optimize.UglifyJsPlugin(),
+      ]
     },
     webpackServer: {
       noInfo: true
     },
     coverageReporter: {
-      type : 'html',
-      dir : 'coverage',
+      type: 'html',
+      dir: 'coverage',
       subDir: 'document'
     }
   });
