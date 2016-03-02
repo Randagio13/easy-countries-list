@@ -5,9 +5,15 @@ class EasyCountriesList {
   getAllCountries = () => {
     return this.countries;
   };
-  getFilterCountry = (countryName) => {
+  getFilterCountryName = (countryName) => {
     const countryResult = this.countries.filter(
       country => country.name.toLowerCase() === countryName.toLowerCase()
+    );
+    return countryResult[0];
+  };
+  getFilterCountryCode = (countryCode) => {
+    const countryResult = this.countries.filter(
+      country => country.countryCode.toLowerCase() === countryCode.toLowerCase()
     );
     return countryResult[0];
   };
