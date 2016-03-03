@@ -152,14 +152,14 @@ var EasyCountriesList = function EasyCountriesList() {
     return _this.countries;
   };
 &nbsp;
-  this.getFilterCountryName = function (countryName) {
+  this.filterByCountryName = function (countryName) {
     var countryResult = _this.countries.filter(function (country) {
       return country.name.toLowerCase() === countryName.toLowerCase();
     });
     return countryResult[0];
   };
 &nbsp;
-  this.getFilterCountryCode = function (countryCode) {
+  this.filterByCountryCode = function (countryCode) {
     var countryResult = _this.countries.filter(function (country) {
       return country.countryCode.toLowerCase() === countryCode.toLowerCase();
     });
