@@ -1,4 +1,4 @@
-# Easy Countries List
+# Easy Countries List [![npm version](https://badge.fury.io/js/easy-countries-list.svg)](https://badge.fury.io/js/easy-countries-list) [![Build Status](https://travis-ci.org/iMasterAle/easy-countries-list.svg?branch=master)](https://travis-ci.org/iMasterAle/easy-countries-list)
 
 This package is a easy standar countries list.
 
