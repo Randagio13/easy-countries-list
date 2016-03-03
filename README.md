@@ -1,7 +1,5 @@
 # Easy Countries List
 
-## Description
-
 This package is a easy standar countries list.
 
 __Salesforce__ and __Zuora__ used this countries list.
@@ -62,3 +60,7 @@ _Return object:_
   countryCode: 'US' // ISO alpha-2
 }
 ```
+
+## Next Feature
+
+- Add ISO alpha-3 code.
