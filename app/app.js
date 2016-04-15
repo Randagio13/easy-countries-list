@@ -17,6 +17,13 @@ class EasyCountriesList {
     );
     return countryResult[0];
   };
+  getFilterCountryCodeThree = (countryCodeThree) => {
+    const countryResult = this.countries.filter(
+      country =>
+      country.countryCodeThree.toLowerCase() === countryCodeThree.toLowerCase()
+    );
+    return countryResult[0];
+  };
 }
 
 export default new EasyCountriesList();

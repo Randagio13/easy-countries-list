@@ -8,6 +8,7 @@
     ],
     "env": {
         "production": {
+            "compress": true,
             "plugins": [
               "transform-react-constant-elements",
               "transform-remove-debugger"

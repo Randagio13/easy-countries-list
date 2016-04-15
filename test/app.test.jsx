@@ -34,4 +34,17 @@ describe('Test EasyCountriesList', () => {
       countryResult
     );
   });
+  it('Test get country from country code three', () => {
+    const countryCodeThree = 'ita';
+    const countryResult = {
+      countryCode: 'IT',
+      name: 'Italy',
+      countryCodeThree: 'ITA'
+    };
+    expect(
+      EasyCountriesList.getFilterCountryCodeThree(countryCodeThree)
+    ).toEqual(
+      countryResult
+    );
+  });
 });
