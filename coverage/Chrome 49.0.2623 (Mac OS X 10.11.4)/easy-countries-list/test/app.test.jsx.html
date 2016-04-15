@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for easy-countries-list/test/app.test.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">easy-countries-list/test/</a> app.test.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>23/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var _expect = require('expect');
+&nbsp;
+var _expect2 = _interopRequireDefault(_expect);
+&nbsp;
+var _app = require('../app/app');
+&nbsp;
+var _app2 = _interopRequireDefault(_app);
+&nbsp;
+var _countries = require('../app/utils/countries.json');
+&nbsp;
+var _countries2 = _interopRequireDefault(_countries);
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { default: obj }; }
+&nbsp;
+describe('Test EasyCountriesList', function () {
+  it('Test get countries list', function () {
+    (0, _expect2.default)(_app2.default.getAllCountries()).toEqual(_countries2.default.countries);
+  });
+  it('Test get country from country name', function () {
+    var countryName = 'italy';
+    var countryResult = {
+      countryCode: 'IT',
+      name: 'Italy'
+    };
+    (0, _expect2.default)(_app2.default.getFilterCountryName(countryName)).toEqual(countryResult);
+  });
+  it('Test get country from country code', function () {
+    var countryCode = 'it';
+    var countryResult = {
+      countryCode: 'IT',
+      name: 'Italy'
+    };
+    (0, _expect2.default)(_app2.default.getFilterCountryCode(countryCode)).toEqual(countryResult);
+  });
+  it('Test get country from country code three', function () {
+    var countryCodeThree = 'ita';
+    var countryResult = {
+      countryCode: 'IT',
+      name: 'Italy',
+      countryCodeThree: 'ITA'
+    };
+    (0, _expect2.default)(_app2.default.getFilterCountryCodeThree(countryCodeThree)).toEqual(countryResult);
+  });
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3QvYXBwLnRlc3QuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFJQSxTQUFTLHdCQUFULEVBQW1DLFlBQU07QUFDdkMsS0FBRyx5QkFBSCxFQUE4QixZQUFNO0FBQ2xDLDBCQUNFLGNBQWtCLGVBQWxCLEVBREYsRUFFRSxPQUZGLENBR0Usb0JBQWMsU0FBZCxDQUhGLENBRGtDO0dBQU4sQ0FBOUIsQ0FEdUM7QUFRdkMsS0FBRyxvQ0FBSCxFQUF5QyxZQUFNO0FBQzdDLFFBQU0sY0FBYyxPQUFkLENBRHVDO0FBRTdDLFFBQU0sZ0JBQWdCO0FBQ3BCLG1CQUFhLElBQWI7QUFDQSxZQUFNLE9BQU47S0FGSSxDQUZ1QztBQU03QywwQkFDRSxjQUFrQixvQkFBbEIsQ0FBdUMsV0FBdkMsQ0FERixFQUVFLE9BRkYsQ0FHRSxhQUhGLEVBTjZDO0dBQU4sQ0FBekMsQ0FSdUM7QUFvQnZDLEtBQUcsb0NBQUgsRUFBeUMsWUFBTTtBQUM3QyxRQUFNLGNBQWMsSUFBZCxDQUR1QztBQUU3QyxRQUFNLGdCQUFnQjtBQUNwQixtQkFBYSxJQUFiO0FBQ0EsWUFBTSxPQUFOO0tBRkksQ0FGdUM7QUFNN0MsMEJBQ0UsY0FBa0Isb0JBQWxCLENBQXVDLFdBQXZDLENBREYsRUFFRSxPQUZGLENBR0UsYUFIRixFQU42QztHQUFOLENBQXpDLENBcEJ1QztBQWdDdkMsS0FBRywwQ0FBSCxFQUErQyxZQUFNO0FBQ25ELFFBQU0sbUJBQW1CLEtBQW5CLENBRDZDO0FBRW5ELFFBQU0sZ0JBQWdCO0FBQ3BCLG1CQUFhLElBQWI7QUFDQSxZQUFNLE9BQU47QUFDQSx3QkFBa0IsS0FBbEI7S0FISSxDQUY2QztBQU9uRCwwQkFDRSxjQUFrQix5QkFBbEIsQ0FBNEMsZ0JBQTVDLENBREYsRUFFRSxPQUZGLENBR0UsYUFIRixFQVBtRDtHQUFOLENBQS9DLENBaEN1QztDQUFOLENBQW5DIiwiZmlsZSI6ImFwcC50ZXN0LmpzeCIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYWxlc3NhbmRyb2Nhc2F6emExMy9TaXRlcy9lYXN5LWNvdW50cmllcy1saXN0Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cGVjdCBmcm9tICdleHBlY3QnO1xuaW1wb3J0IEVhc3lDb3VudHJpZXNMaXN0IGZyb20gJy4uL2FwcC9hcHAnO1xuaW1wb3J0IGNvdW50cmllc0xpc3QgZnJvbSAnLi4vYXBwL3V0aWxzL2NvdW50cmllcy5qc29uJztcblxuZGVzY3JpYmUoJ1Rlc3QgRWFzeUNvdW50cmllc0xpc3QnLCAoKSA9PiB7XG4gIGl0KCdUZXN0IGdldCBjb3VudHJpZXMgbGlzdCcsICgpID0+IHtcbiAgICBleHBlY3QoXG4gICAgICBFYXN5Q291bnRyaWVzTGlzdC5nZXRBbGxDb3VudHJpZXMoKVxuICAgICkudG9FcXVhbChcbiAgICAgIGNvdW50cmllc0xpc3QuY291bnRyaWVzXG4gICAgKTtcbiAgfSk7XG4gIGl0KCdUZXN0IGdldCBjb3VudHJ5IGZyb20gY291bnRyeSBuYW1lJywgKCkgPT4ge1xuICAgIGNvbnN0IGNvdW50cnlOYW1lID0gJ2l0YWx5JztcbiAgICBjb25zdCBjb3VudHJ5UmVzdWx0ID0ge1xuICAgICAgY291bnRyeUNvZGU6ICdJVCcsXG4gICAgICBuYW1lOiAnSXRhbHknXG4gICAgfTtcbiAgICBleHBlY3QoXG4gICAgICBFYXN5Q291bnRyaWVzTGlzdC5nZXRGaWx0ZXJDb3VudHJ5TmFtZShjb3VudHJ5TmFtZSlcbiAgICApLnRvRXF1YWwoXG4gICAgICBjb3VudHJ5UmVzdWx0XG4gICAgKTtcbiAgfSk7XG4gIGl0KCdUZXN0IGdldCBjb3VudHJ5IGZyb20gY291bnRyeSBjb2RlJywgKCkgPT4ge1xuICAgIGNvbnN0IGNvdW50cnlDb2RlID0gJ2l0JztcbiAgICBjb25zdCBjb3VudHJ5UmVzdWx0ID0ge1xuICAgICAgY291bnRyeUNvZGU6ICdJVCcsXG4gICAgICBuYW1lOiAnSXRhbHknXG4gICAgfTtcbiAgICBleHBlY3QoXG4gICAgICBFYXN5Q291bnRyaWVzTGlzdC5nZXRGaWx0ZXJDb3VudHJ5Q29kZShjb3VudHJ5Q29kZSlcbiAgICApLnRvRXF1YWwoXG4gICAgICBjb3VudHJ5UmVzdWx0XG4gICAgKTtcbiAgfSk7XG4gIGl0KCdUZXN0IGdldCBjb3VudHJ5IGZyb20gY291bnRyeSBjb2RlIHRocmVlJywgKCkgPT4ge1xuICAgIGNvbnN0IGNvdW50cnlDb2RlVGhyZWUgPSAnaXRhJztcbiAgICBjb25zdCBjb3VudHJ5UmVzdWx0ID0ge1xuICAgICAgY291bnRyeUNvZGU6ICdJVCcsXG4gICAgICBuYW1lOiAnSXRhbHknLFxuICAgICAgY291bnRyeUNvZGVUaHJlZTogJ0lUQSdcbiAgICB9O1xuICAgIGV4cGVjdChcbiAgICAgIEVhc3lDb3VudHJpZXNMaXN0LmdldEZpbHRlckNvdW50cnlDb2RlVGhyZWUoY291bnRyeUNvZGVUaHJlZSlcbiAgICApLnRvRXF1YWwoXG4gICAgICBjb3VudHJ5UmVzdWx0XG4gICAgKTtcbiAgfSk7XG59KTtcbiJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 15 2016 18:17:46 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
