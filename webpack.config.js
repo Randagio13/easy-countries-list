@@ -1,3 +1,4 @@
+/* eslint-disable */
 var webpack = require('webpack');
 var path = require('path');
 
@@ -56,7 +57,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react',
       ReactDOM: 'react-dom'
-  }),
+    }),
     // new AutoInstallPlugin({save: false})
   ],
   devServer: {
