@@ -17,7 +17,7 @@ describe('Test EasyCountriesList', () => {
       name: 'Italy'
     };
     expect(
-      EasyCountriesList.getFilterCountryName(countryName)
+      EasyCountriesList.filterByCountryName(countryName)
     ).toEqual(
       countryResult
     );
@@ -29,7 +29,7 @@ describe('Test EasyCountriesList', () => {
       name: 'Italy'
     };
     expect(
-      EasyCountriesList.getFilterCountryCode(countryCode)
+      EasyCountriesList.filterByCountryCode(countryCode)
     ).toEqual(
       countryResult
     );

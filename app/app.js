@@ -5,13 +5,13 @@ class EasyCountriesList {
   getAllCountries = () => {
     return this.countries;
   };
-  getFilterCountryName = (countryName) => {
+  filterByCountryName = (countryName) => {
     const countryResult = this.countries.filter(
       country => country.name.toLowerCase() === countryName.toLowerCase()
     );
     return countryResult[0];
   };
-  getFilterCountryCode = (countryCode) => {
+  filterByCountryCode = (countryCode) => {
     const countryResult = this.countries.filter(
       country => country.countryCode.toLowerCase() === countryCode.toLowerCase()
     );

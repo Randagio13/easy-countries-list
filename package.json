@@ -14,7 +14,8 @@
     "push-tags": "git push && git push --tags",
     "clean:modules": "rm -rf node_modules/",
     "clean:build": "rm -rf build/",
-    "test": "karma start"
+    "test": "./node_modules/.bin/karma start karma.conf.js --browsers Firefox --single-run",
+    "test:dev": "karma start"
   },
   "repository": {
     "type": "git",

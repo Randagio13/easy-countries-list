@@ -1,11 +1,11 @@
 import EasyCountriesList from './app/app';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class Test extends Component {
   render() {
-    const country = EasyCountriesList.getFilterCountry('italy');
-    const countryCode = EasyCountriesList.getFilterCountryCode('it');
+    const country = EasyCountriesList.filterByCountryName('united states');
+    const countryCode = EasyCountriesList.filterByCountryCode('it');
     const countries = EasyCountriesList.getAllCountries();
     return (
       <div>
