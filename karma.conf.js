@@ -49,13 +49,7 @@ module.exports = function(config) { // eslint-disable-line
         ],
         modulesDirectories: ['node_modules'],
         extensions: ['', '.jsx', '.js']
-      },
-      plugins: [
-        // new webpack.ProvidePlugin({
-        //   React: 'react'
-        // })
-        // new webpack.optimize.UglifyJsPlugin(),
-      ]
+      }
     },
     webpackServer: {
       noInfo: true

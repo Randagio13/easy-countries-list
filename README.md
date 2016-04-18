@@ -42,7 +42,8 @@ _Return object:_
 ```js
 {
   name: 'United States',
-  countryCode: 'US' // ISO alpha-2
+  countryCode: 'US', // ISO alpha-2
+  countryCodeThree: 'USA' // ISO alpha-3
 }
 ```
 
@@ -57,10 +58,27 @@ _Return object:_
 ```js
 {
   name: 'United States',
-  countryCode: 'US' // ISO alpha-2
+  countryCode: 'US', // ISO alpha-2
+  countryCodeThree: 'USA' // ISO alpha-3
+}
+```
+
+- #### Filter by Country Code Three:
+
+```js
+import EasyCountriesList from 'easy-countries-list';
+
+const countries = EasyCountriesList.filterByCountryCodeThree('Usa');
+```
+_Return object:_
+```js
+{
+  name: 'United States',
+  countryCode: 'US', // ISO alpha-2
+  countryCodeThree: 'USA' // ISO alpha-3
 }
 ```
 
 ## Next Feature
 
-- Add ISO alpha-3 code.
+- Add states list for US and Canada.

@@ -14,7 +14,8 @@ describe('Test EasyCountriesList', () => {
     const countryName = 'italy';
     const countryResult = {
       countryCode: 'IT',
-      name: 'Italy'
+      name: 'Italy',
+      countryCodeThree: 'ITA'
     };
     expect(
       EasyCountriesList.filterByCountryName(countryName)
@@ -26,7 +27,8 @@ describe('Test EasyCountriesList', () => {
     const countryCode = 'it';
     const countryResult = {
       countryCode: 'IT',
-      name: 'Italy'
+      name: 'Italy',
+      countryCodeThree: 'ITA'
     };
     expect(
       EasyCountriesList.filterByCountryCode(countryCode)
@@ -35,7 +37,7 @@ describe('Test EasyCountriesList', () => {
     );
   });
   it('Test get country from country code three', () => {
-    const countryCodeThree = 'ita';
+    const countryCodeThree = 'Ita';
     const countryResult = {
       countryCode: 'IT',
       name: 'Italy',
